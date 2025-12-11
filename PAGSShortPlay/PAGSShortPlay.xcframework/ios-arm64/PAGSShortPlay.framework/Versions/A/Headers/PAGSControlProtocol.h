@@ -79,6 +79,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+typedef  void(^PAGSPlayerSeekStatus)(PAGSSliderSeekStatus seekStatus,CGFloat progress);
 /**
  进度条控件协议
  */
@@ -86,17 +88,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 
+/// 将剧目信息传递给开发者
+/// @param shortPlay 剧目的信息
+/// @param index 第几集
+- (void)setShortPlay:(PAGSShort *)shortPlay index:(int)index;
+
 /// 进度条更新
 /// @param playTime 当前播放位置, 单位秒
 /// @param duration 播放总时长, 单位秒
-/// @param bufferProgress 缓冲进度,取值范围(0,100)
-/// @param shortPlay 剧目的信息
-/// @param index  第几集
-- (void)updateProgress:(CGFloat)playTime duration:(CGFloat)duration buffer:(CGFloat)bufferProgress shortPlay:(PAGSShort *)shortPlay index:(int)index;
+- (void)updateProgress:(CGFloat)progressInSeconds duration:(CGFloat)durationInSeconds;
+
+/// 滑动进度条的处理
+- (void)setSeekStatusChange:(PAGSPlayerSeekStatus)seekStatusChange;
 
 /// 同步视频播放状态
 /// @param isPaused  视频是否处于暂停状态,  YES 处于暂停装该, NO 处于播放状态
-/// @note 该方法在视频暂停和播放时会被调用, 通过该方法实现在暂停时 进度条样式该表的交互.
+/// @note 该方法在视频暂停和播放时会被调用, 通过该方法实现在暂停时 进度条样式的更改.
 - (void)setVideoPaused:(BOOL)isPaused;
 
 /// 设置视频播放时长

@@ -49,8 +49,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) PAGSCollectInfo *user_collect_info;
 /// 标签信息
 @property (nonatomic, strong) NSArray *tag_list;
-
-
+/// 剧集更新时间
+@property (nonatomic, assign) long update_time;
+///剧集首次上线时间
+@property (nonatomic, assign) long first_online_time;
 
 @end
 

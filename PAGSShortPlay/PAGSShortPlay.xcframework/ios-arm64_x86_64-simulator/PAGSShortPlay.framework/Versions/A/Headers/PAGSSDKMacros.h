@@ -11,6 +11,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, PAGSSliderSeekStatus) {//拖动的状态
+        PAGSSliderSeekStatusDefault   = 0, // 默认状态
+        PAGSSliderSeekStatusStart     = 1, // 开始拖动
+        PAGSSliderSeekStatusSeeking       = 2, // 拖动中
+        PAGSSliderSeekStatusSeekFinish    = 3, // 拖动结束
+};
 
 typedef NS_ENUM (NSUInteger, PAGSControlStatus) {
     ///未知
@@ -36,6 +42,8 @@ typedef NS_ENUM (NSUInteger, PAGSControlType) {
     PAGSControlTypeLoading    = 4,
     /// 播放器错误提示视图
     PAGSControlTypeErrorPage    = 5,
+    /// 播放器进度条
+    PAGSControlTypeProgressBar   = 6,
     /// 自定义视图
     PAGSControlTypeCustom    = 99,
 };

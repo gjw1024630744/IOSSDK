@@ -78,6 +78,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置剧集封面占位图
 - (void)setDefaultCoverImage:(UIImage *)defaultCoverImage;
 
+/// 设置剧集封面图所在imageview的填充模式
+- (void)setDefaultCoverImageContentMode:(UIViewContentMode)contentMode;
+
+/// 设置播放暂停按钮图片
+/// @note 图片所在imageview的size为 44 * 44
+- (void)setStartPlayIconImage:(UIImage *)image;
+
 
 
 @end

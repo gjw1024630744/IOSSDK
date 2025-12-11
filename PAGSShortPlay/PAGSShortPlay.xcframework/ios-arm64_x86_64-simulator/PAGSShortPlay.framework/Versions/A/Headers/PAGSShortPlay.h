@@ -25,5 +25,6 @@
 #import "UIDevice+PAGS.h"
 #import "PAGSControlProtocol.h"
 #import "UILabel+PAGS.h"
+#import "UIColor+PAGS.h"
 
 #endif /* PAGSShortPlay_h */
