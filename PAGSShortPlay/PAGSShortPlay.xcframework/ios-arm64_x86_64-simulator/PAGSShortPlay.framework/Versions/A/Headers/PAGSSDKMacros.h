@@ -210,6 +210,8 @@ static  PAGSLocalLanguageType const PAGLocalKoLanguage = @"ko";
 static  PAGSLocalLanguageType const PAGLocalPortugalLanguage = @"pt";
 /// 西班牙语
 static  PAGSLocalLanguageType const PAGLocalSpanishLanguage = @"es";
+/// 阿拉伯语语
+static  PAGSLocalLanguageType const PAGLocalArLanguage = @"ar";
 
 // MARK: - 通知相关
 

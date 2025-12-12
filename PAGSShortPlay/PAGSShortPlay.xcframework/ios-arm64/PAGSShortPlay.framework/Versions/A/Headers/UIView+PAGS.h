@@ -48,4 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIEdgeInsets)pags_defaultAreaInsets;
 
 @end
+
+@interface UIView (PAGS_RTL)
+
+/// 自适应RTL布局
+/// @warning  请在该lable 被添加到父视图后再调用该方法
+- (void)pags_resetFrameToFitRTL;
+
+@end
 NS_ASSUME_NONNULL_END

@@ -53,6 +53,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) long update_time;
 ///剧集首次上线时间
 @property (nonatomic, assign) long first_online_time;
+/// 缩率图集合
+/// @note 目前该字典中的cover_image_thumb - > thumb 对应的value 是本剧的缩略封面图
+@property (nonatomic,copy) NSDictionary *cover_image_thumb;
+
 
 @end
 
