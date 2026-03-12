@@ -118,6 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 清除sdk缓存
 + (void)clearLocalCache;
 
+
 @end
 
 NS_ASSUME_NONNULL_END
