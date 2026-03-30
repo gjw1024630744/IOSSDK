@@ -1,0 +1,21 @@
+/* 
+  PAGSLanguage.strings
+
+  Created by zth on 2024/08/14.
+  Copyright © 2024 bytedance. All rights reserved.
+*/
+
+// String
+
+"pags_detail_desc" = "%@ | حلقات %lld";
+"pags_detail_title" = "الحلقة الـ %lld";
+"pags_process_state_end" = "مكتمل";
+"pags_process_state_not_end" = "غير مكتمل ";
+"pags_video_error" = "فشل تحميل الفيديو";
+"pags_click_retry" = "انقر هنا للمحاولة مرة أخرى ";
+"pags_load_fail" = "فشل التحميل ";
+
+
+
+
+// Icon
