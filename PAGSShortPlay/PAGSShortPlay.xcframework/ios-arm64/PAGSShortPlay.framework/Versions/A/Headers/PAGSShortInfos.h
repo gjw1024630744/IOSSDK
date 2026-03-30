@@ -40,7 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 完结状态, 1完结  2未完结
 @property (nonatomic, assign) PAGSShortState progress_state;
 /// 字幕语言
-@property (nonatomic, copy) NSString *language;
+@property (nonatomic, copy) NSString *language __deprecated_msg("This property has been deprecated, please use display_language instead ");;
+/// 字幕语言
+@property (nonatomic, copy) NSString *display_language;
+/// 音频语言
+@property (nonatomic, copy) NSString *voice_language;
+/// 拍摄原语
+@property (nonatomic, copy) NSString *original_language;
 /// 剧集数组
 @property (nonatomic, strong) NSArray *episodes;
 /// 全局收藏信息, count表示收藏数
@@ -56,7 +62,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 缩率图集合
 /// @note 目前该字典中的cover_image_thumb - > thumb 对应的value 是本剧的缩略封面图
 @property (nonatomic,copy) NSDictionary *cover_image_thumb;
-
+///文件id
+@property (nonatomic, assign) long file_id;
 
 @end
 

@@ -41,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @warning setContentLanguage: 和本方法会互相覆盖, 建议不再使用setContentLanguage:方法
 + (void)setContentLanguages:(NSArray <NSString *>*)languages;
 
+/// 设置短剧音频语种
+/// @param languages 音频语种数组
+/// @param 若设置该字段,则该方法值 和 setContentLanguages:的传入值 共同影响短剧内容的返回结果.
++ (void)setVoiceLanguages:(NSArray <NSString *>*)languages;
+
 ///请求短剧列表
 ///@param index 页索引, 从1开始
 ///@param count 请求数量
@@ -57,8 +62,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 请求热门短剧列表
 ///@param index 页索引, 从1开始
 ///@param count 请求数量
+///@param categoryIds 分类id集合,无则传空数组
 ///@param completionHandler 结果回调
-+ (void)requestPopularDrama:(int)index count:(int)count completionHandler:(void(^)(NSArray <PAGSShort *> * _Nullable list,BOOL haseMore,NSError * _Nullable error))completionHandler;
++ (void)requestPopularDrama:(int)index count:(int)count categoryIds:(NSArray *_Nullable)categoryIds  completionHandler:(void(^)(NSArray <PAGSShort *> * _Nullable list,BOOL haseMore,NSError * _Nullable error))completionHandler;
 
 /// 搜索短剧
 ///@param index 页索引, 从1开始
